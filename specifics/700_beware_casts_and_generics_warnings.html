@@ -1,0 +1,1167 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Beware Casts And Generics Warnings · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pygments/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="800_do_not_use_magic_numbers.html" />
+    
+    
+    <link rel="prev" href="600_avoid_apis_from_prehistory.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../process.html">
+            
+                <a href="../process.html">
+            
+                    
+                    Process
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../process/100_build_fast_feedback_loops.html">
+            
+                <a href="../process/100_build_fast_feedback_loops.html">
+            
+                    
+                    Build Fast Feedback Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../process/200_instant_feedback.html">
+            
+                <a href="../process/200_instant_feedback.html">
+            
+                    
+                    Instant Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../process/300_fast_feedback.html">
+            
+                <a href="../process/300_fast_feedback.html">
+            
+                    
+                    Fast Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../process/400_slower_feedback.html">
+            
+                <a href="../process/400_slower_feedback.html">
+            
+                    
+                    Slower Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../process/600_agree_the_language_you_use_for_tests.html">
+            
+                <a href="../process/600_agree_the_language_you_use_for_tests.html">
+            
+                    
+                    Agree The Language You Use For Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../process/700_use_coverage_as_a_tool_not_a_target.html">
+            
+                <a href="../process/700_use_coverage_as_a_tool_not_a_target.html">
+            
+                    
+                    Use Coverage As A Tool Not A Target
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../style.html">
+            
+                <a href="../style.html">
+            
+                    
+                    Style
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../style/001_remember_kiss_and_yagni.html">
+            
+                <a href="../style/001_remember_kiss_and_yagni.html">
+            
+                    
+                    Remember Kiss And Yagni
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../style/002_prefer_reversible_decisions.html">
+            
+                <a href="../style/002_prefer_reversible_decisions.html">
+            
+                    
+                    Prefer Reversible Decisions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../style/010_use_a_consistent_code_layout.html">
+            
+                <a href="../style/010_use_a_consistent_code_layout.html">
+            
+                    
+                    Use A Consistent Code Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../style/020_prefer_readable_code_to_comments.html">
+            
+                <a href="../style/020_prefer_readable_code_to_comments.html">
+            
+                    
+                    Prefer Readable Code To Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../style/030_javadoc_judiciously.html">
+            
+                <a href="../style/030_javadoc_judiciously.html">
+            
+                    
+                    Javadoc Judiciously
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../style/040_keep_your_code_dry.html">
+            
+                <a href="../style/040_keep_your_code_dry.html">
+            
+                    
+                    Keep Your Code Dry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../style/041_prefer_immutable_objects.html">
+            
+                <a href="../style/041_prefer_immutable_objects.html">
+            
+                    
+                    Prefer Immutable Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../style/051_optimise_for_readability_not_performance.html">
+            
+                <a href="../style/051_optimise_for_readability_not_performance.html">
+            
+                    
+                    Optimise For Readability Not Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../style/052_prefer_composition.html">
+            
+                <a href="../style/052_prefer_composition.html">
+            
+                    
+                    Prefer Composition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../style/100_consider_code_generators_carefully.html">
+            
+                <a href="../style/100_consider_code_generators_carefully.html">
+            
+                    
+                    Consider Code Generators Carefully
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../style/200_group_methods_for_easy_comprehension.html">
+            
+                <a href="../style/200_group_methods_for_easy_comprehension.html">
+            
+                    
+                    Group Methods For Easy Comprehension
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../style/300_keep_methods_small_and_simple.html">
+            
+                <a href="../style/300_keep_methods_small_and_simple.html">
+            
+                    
+                    Keep Methods Small And Simple
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../style/400_methods_should_do_one_thing.html">
+            
+                <a href="../style/400_methods_should_do_one_thing.html">
+            
+                    
+                    Methods Should Do One Thing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../style/600_avoid_null.html">
+            
+                <a href="../style/600_avoid_null.html">
+            
+                    
+                    Avoid Null
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../style/601_keep_it_solid.html">
+            
+                <a href="../style/601_keep_it_solid.html">
+            
+                    
+                    Keep It Solid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../style/700_use_final_liberally.html">
+            
+                <a href="../style/700_use_final_liberally.html">
+            
+                    
+                    Use Final Liberally
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../style/800_provide_no_more_than_one_worker_constructor.html">
+            
+                <a href="../style/800_provide_no_more_than_one_worker_constructor.html">
+            
+                    
+                    Provide No More Than One Worker Constructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../style/900_avoid_checked_exceptions.html">
+            
+                <a href="../style/900_avoid_checked_exceptions.html">
+            
+                    
+                    Avoid Checked Exceptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../style/901_make_dependencies_explicit.html">
+            
+                <a href="../style/901_make_dependencies_explicit.html">
+            
+                    
+                    Make Dependencies Explicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../specifics.html">
+            
+                <a href="../specifics.html">
+            
+                    
+                    Specifics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="100_know_how_to_implement_hashcode_and_equals.html">
+            
+                <a href="100_know_how_to_implement_hashcode_and_equals.html">
+            
+                    
+                    Know How To Implement Hashcode And Equals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="200_do_not_reassign_parameters.html">
+            
+                <a href="200_do_not_reassign_parameters.html">
+            
+                    
+                    Do Not Reassign Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="300_limit_scope.html">
+            
+                <a href="300_limit_scope.html">
+            
+                    
+                    Limit Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="400_prefer_for_each_loops_to_for_loops.html">
+            
+                <a href="400_prefer_for_each_loops_to_for_loops.html">
+            
+                    
+                    Prefer For Each Loops To For Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="500_prefer_maps_and_filters_to_imperative_loops.html">
+            
+                <a href="500_prefer_maps_and_filters_to_imperative_loops.html">
+            
+                    
+                    Prefer Maps And Filters To Imperative Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="600_avoid_apis_from_prehistory.html">
+            
+                <a href="600_avoid_apis_from_prehistory.html">
+            
+                    
+                    Avoid Apis From Prehistory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7" data-path="700_beware_casts_and_generics_warnings.html">
+            
+                <a href="700_beware_casts_and_generics_warnings.html">
+            
+                    
+                    Beware Casts And Generics Warnings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="800_do_not_use_magic_numbers.html">
+            
+                <a href="800_do_not_use_magic_numbers.html">
+            
+                    
+                    Do Not Use Magic Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="800_do_not_use_the_assert_keyword.html">
+            
+                <a href="800_do_not_use_the_assert_keyword.html">
+            
+                    
+                    Do Not Use The Assert Keyword
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="900_avoid_floats_and_doubles.html">
+            
+                <a href="900_avoid_floats_and_doubles.html">
+            
+                    
+                    Avoid Floats And Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="1000_do_not_use_reflection.html">
+            
+                <a href="1000_do_not_use_reflection.html">
+            
+                    
+                    Do Not Use Reflection
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../tests.html">
+            
+                <a href="../tests.html">
+            
+                    
+                    Tests
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../tests/100_write_specifications_not_tests.html">
+            
+                <a href="../tests/100_write_specifications_not_tests.html">
+            
+                    
+                    Write Specifications Not Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../tests/200_think_units_not_methods.html">
+            
+                <a href="../tests/200_think_units_not_methods.html">
+            
+                    
+                    Think Units Not Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../tests/300_name_tests_with_a_specification_style.html">
+            
+                <a href="../tests/300_name_tests_with_a_specification_style.html">
+            
+                    
+                    Name Tests With A Specification Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../tests/400_pick_examples_carefully.html">
+            
+                <a href="../tests/400_pick_examples_carefully.html">
+            
+                    
+                    Pick Examples Carefully
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../tests/500_make_tests_easy_to_understand.html">
+            
+                <a href="../tests/500_make_tests_easy_to_understand.html">
+            
+                    
+                    Make Tests Easy To Understand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../tests/600_understand_how_to_use_mocks_and_stubs.html">
+            
+                <a href="../tests/600_understand_how_to_use_mocks_and_stubs.html">
+            
+                    
+                    Understand How To Use Mocks And Stubs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../tests/700_understand_your_options_for_code_reuse.html">
+            
+                <a href="../tests/700_understand_your_options_for_code_reuse.html">
+            
+                    
+                    Understand Your Options For Code Reuse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../tests/750_write_repeatable_tests.html">
+            
+                <a href="../tests/750_write_repeatable_tests.html">
+            
+                    
+                    Write Repeatable Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../tests/800_only_unit_test_code_it_makes_sense_to_unit_test.html">
+            
+                <a href="../tests/800_only_unit_test_code_it_makes_sense_to_unit_test.html">
+            
+                    
+                    Only Unit Test Code It Makes Sense To Unit Test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../tests/900_testing_FAQS.html">
+            
+                <a href="../tests/900_testing_FAQS.html">
+            
+                    
+                    Testing FAQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../badadvice.html">
+            
+                <a href="../badadvice.html">
+            
+                    
+                    Bad advice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../badadvice/010_getters_and_setters.md">
+            
+                <span>
+            
+                    
+                    Always use Getters and Setters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../badadvice/100_single_exit_point_rules.html">
+            
+                <a href="../badadvice/100_single_exit_point_rules.html">
+            
+                    
+                    Single Exit Point Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../badadvice/200_always_use_a_StringBuffer.html">
+            
+                <a href="../badadvice/200_always_use_a_StringBuffer.html">
+            
+                    
+                    Always Use A StringBuffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../badadvice/300_hungarian_notation.html">
+            
+                <a href="../badadvice/300_hungarian_notation.html">
+            
+                    
+                    Hungarian Notation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Beware Casts And Generics Warnings</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="beware-casts-and-generics-warnings"><a name="beware-casts-and-generics-warnings" class="plugin-anchor" href="#beware-casts-and-generics-warnings"><i class="fa fa-link" aria-hidden="true"></i></a>Beware Casts and Generics Warnings</h2>
+<h3 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h3>
+<p>Casts dilute the benefit of Java&apos;s type system, making code both less readable and less safe.</p>
+<p>Avoid casts wherever possible.</p>
+<p>If you find yourself writing one, stop and ask yourself why you are writing it.</p>
+<p>What would need to be changed in your code so you did not need to write that cast?</p>
+<p>Why can&apos;t you make that change?</p>
+<h3 id="detail"><a name="detail" class="plugin-anchor" href="#detail"><i class="fa fa-link" aria-hidden="true"></i></a>Detail</h3>
+<p>Java&apos;s type system is there to help us - it catches bugs at compile-time and documents our code, making it easier to understand and navigate.</p>
+<p>When we add a cast to our code, we lose both these benefits.</p>
+<p>Casts get introduced into code for three main reasons:</p>
+<ol>
+<li>We have reached the limits of Java&apos;s type system and the programmer must take control</li>
+<li>The overall design of the code is poor</li>
+<li>The code uses raw generic types</li>
+</ol>
+<p>We&apos;ll look at these in reverse order.</p>
+<h4 id="code-with-raw-types"><a name="code-with-raw-types" class="plugin-anchor" href="#code-with-raw-types"><i class="fa fa-link" aria-hidden="true"></i></a>Code with Raw Types</h4>
+<p>If code contains raw generic types (either because the code pre-dates Java 5 or the programmer is not familiar with Java) then it will create the need to cast.</p>
+<p>For example:</p>
+<pre><code class="lang-java"><span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="n">numberList</span><span class="o">();</span>
+<span class="k">for</span> <span class="o">(</span><span class="n">Object</span> <span class="n">each</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">Integer</span> <span class="n">i</span> <span class="o">=</span> <span class="o">(</span><span class="n">Integer</span><span class="o">)</span> <span class="n">each</span><span class="o">;</span>
+  <span class="c1">// do things with integers</span>
+<span class="o">}</span>
+</code></pre>
+<p>The compiler will not be happy that we have failed to fully declare the type of <code>List</code> we are dealing with and will (depending on how it&apos;s been configured) generate an error or warning on the line where <code>list</code> is declared e.g.</p>
+<pre><code>List is a raw type. References to generic type List&lt;E&gt; should be parameterized
+</code></pre><p>Similarly, for errant code such as:</p>
+<pre><code class="lang-java"><span class="n">List</span> <span class="n">l</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Number</span><span class="o">&gt;();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">ls</span> <span class="o">=</span> <span class="n">l</span><span class="o">;</span>
+</code></pre>
+<p>The compiler will issue:</p>
+<pre><code>The expression of type List needs unchecked conversion to conform to List&lt;String&gt;
+</code></pre><p>Make sure that all such warnings are addressed, either by imposing a zero compiler warnings policy or by configuring the compiler to treat them as errors.</p>
+<p>In this case, removing both the cast and the warning is straight forward:</p>
+<pre><code class="lang-java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">numberList</span><span class="o">();</span>
+<span class="k">for</span> <span class="o">(</span><span class="n">Integer</span> <span class="n">each</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+   <span class="c1">// do things with each</span>
+<span class="o">}</span>
+</code></pre>
+<h4 id="poor-design"><a name="poor-design" class="plugin-anchor" href="#poor-design"><i class="fa fa-link" aria-hidden="true"></i></a>Poor Design</h4>
+<p>Sometimes, removing a cast or fixing a warning is non-trivial. We have bumped into issue two - poor design.</p>
+<p>For example:</p>
+<pre><code class="lang-java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;</span> <span class="n">widgets</span> <span class="o">=</span> <span class="n">getWidgets</span><span class="o">();</span>
+<span class="n">List</span> <span class="n">results</span> <span class="o">=</span> <span class="n">process</span><span class="o">(</span><span class="n">widgets</span><span class="o">);</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="n">Object</span> <span class="n">each</span> <span class="o">:</span> <span class="n">results</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">each</span> <span class="k">instanceof</span> <span class="n">String</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// handle failure using data from string</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">EnhancedWidget</span> <span class="n">widget</span> <span class="o">=</span> <span class="o">(</span><span class="n">EnhancedWidget</span><span class="o">)</span> <span class="n">each</span><span class="o">;</span>
+    <span class="n">widget</span><span class="o">.</span><span class="na">doSomething</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>Normally, objects placed into a collection should be of a single type or of multiple types related by a common superclass or interface.</p>
+<p>Here, unrelated types have been placed into the same list with a String used to communicate some sort of information about how &quot;processing&quot; of a widget has failed.</p>
+<p>The classic OO fix for this code would be to introduce a <code>ProcessResult</code> interface with two concrete implementations.</p>
+<pre><code class="lang-java"><span class="kd">interface</span> <span class="nc">ProcessResult</span> <span class="o">{</span>
+ <span class="kt">void</span> <span class="nf">doSomething</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Success</span> <span class="kd">implements</span> <span class="n">ProcessResult</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">EnhancedWidget</span> <span class="n">result</span><span class="o">;</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">doSomething</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">result</span><span class="o">.</span><span class="na">doSomething</span><span class="o">();</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Failure</span> <span class="kd">implements</span> <span class="n">ProcessResult</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">result</span><span class="o">;</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">doSomething</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// do something with result string</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+<p>The original code can then be fixed as follows:</p>
+<pre><code class="lang-java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;</span> <span class="n">widgets</span> <span class="o">=</span> <span class="n">getWidgets</span><span class="o">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">ProcessResult</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">process</span><span class="o">(</span><span class="n">widgets</span><span class="o">);</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="n">ProcessResult</span> <span class="n">each</span> <span class="o">:</span> <span class="n">results</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">each</span><span class="o">.</span><span class="na">doSomething</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>Or, more concisely in Java 8:</p>
+<pre><code class="lang-java"> <span class="n">List</span><span class="o">&lt;</span><span class="n">ProcessResult</span><span class="o">&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">process</span><span class="o">(</span><span class="n">widgets</span><span class="o">);</span>
+ <span class="n">results</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">ProcessResult</span><span class="o">::</span><span class="n">doSomething</span><span class="o">);</span>
+</code></pre>
+<p>It may also sometimes make sense to use a disjoint union type aka <code>Either</code>.</p>
+<p>This technique can be particularly useful as an interim step when reworking legacy code that uses mixed type raw collections, but can also be a sensible approach when dealing with error conditions.</p>
+<p>Unfortunately, Java does not provide an <code>Either</code> type out of the box but at its simplest it looks something like:</p>
+<pre><code class="lang-java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Either</span><span class="o">&lt;</span><span class="n">L</span><span class="o">,</span><span class="n">R</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">L</span> <span class="n">left</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="n">R</span> <span class="n">right</span><span class="o">;</span>
+
+  <span class="kd">private</span> <span class="nf">Either</span><span class="o">(</span><span class="n">L</span> <span class="n">left</span><span class="o">,</span> <span class="n">R</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">left</span> <span class="o">=</span> <span class="n">left</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">right</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">L</span><span class="o">,</span> <span class="n">R</span><span class="o">&gt;</span> <span class="n">Either</span><span class="o">&lt;</span><span class="n">L</span><span class="o">,</span> <span class="n">R</span><span class="o">&gt;</span> <span class="nf">left</span><span class="o">(</span><span class="kd">final</span> <span class="n">L</span> <span class="n">left</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="n">Either</span><span class="o">&lt;</span><span class="n">L</span><span class="o">,</span> <span class="n">R</span><span class="o">&gt;(</span><span class="n">left</span><span class="o">,</span><span class="kc">null</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="n">L</span><span class="o">,</span> <span class="n">R</span><span class="o">&gt;</span> <span class="n">Either</span><span class="o">&lt;</span><span class="n">L</span><span class="o">,</span> <span class="n">R</span><span class="o">&gt;</span> <span class="nf">right</span><span class="o">(</span><span class="kd">final</span> <span class="n">R</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="n">Either</span><span class="o">&lt;</span><span class="n">L</span><span class="o">,</span> <span class="n">R</span><span class="o">&gt;(</span><span class="kc">null</span><span class="o">,</span><span class="n">right</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kt">boolean</span> <span class="nf">isLeft</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">left</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="n">L</span> <span class="nf">left</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">left</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="n">R</span> <span class="nf">right</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">right</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+<p>Libraries such as Atlassian&apos;s Fugue provide implementations with much richer functionality.</p>
+<p>Using the simplistic form of <code>Either</code> with Java 7 the code could be re-written as:</p>
+<pre><code class="lang-java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;</span> <span class="n">widgets</span> <span class="o">=</span> <span class="n">getWidgets</span><span class="o">();</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Either</span><span class="o">&lt;</span><span class="n">ProcessResult</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">results</span> <span class="o">=</span> <span class="n">process</span><span class="o">(</span><span class="n">widgets</span><span class="o">);</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="n">Either</span><span class="o">&lt;</span><span class="n">ProcessResult</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">each</span> <span class="o">:</span> <span class="n">results</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">each</span><span class="o">.</span><span class="na">isLeft</span><span class="o">())</span> <span class="o">{</span>
+    <span class="c1">// handle failure using data from string</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">each</span><span class="o">.</span><span class="na">right</span><span class="o">().</span><span class="na">doSomething</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>While most Java programmers will prefer the earlier OO version, this version has two advantages:</p>
+<ol>
+<li>It requires no change to the <em>structure</em> of the original code - all we have really done is make the types document what is happening</li>
+<li>It requires less code</li>
+</ol>
+<p>This pattern can help quickly tame a legacy code base that is difficult to comprehend.</p>
+<h4 id="limits-of-the-type-system"><a name="limits-of-the-type-system" class="plugin-anchor" href="#limits-of-the-type-system"><i class="fa fa-link" aria-hidden="true"></i></a>Limits of the Type System</h4>
+<p>Sometimes we do reach the limits of Java&apos;s type system and need to cast.</p>
+<p>Before we do this, we must make certain that the cast is safe and there is no better solution to our problem.</p>
+<p>Similarly, we may need to sometimes suppress a Generics warning, this can be done by annotating with <code>@SuppressWarnings</code> e.g.</p>
+<pre><code class="lang-java"><span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">&quot;unchecked&quot;</span><span class="o">)</span>
+<span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">read</span><span class="o">(</span><span class="kd">final</span> <span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">type</span><span class="o">,</span> <span class="n">String</span> <span class="n">xml</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="o">(</span><span class="n">T</span><span class="o">)</span> <span class="n">fromXml</span><span class="o">(</span><span class="n">xml</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="n">Object</span> <span class="nf">fromXml</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">xml</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="o">...</span> <span class="c1">// de-serialise from string</span>
+<span class="o">}</span>
+</code></pre>
+<p>Here, the compiler has no way of knowing what type has been serialized to the String. Hopefully the programmer does or else a runtime error will occur.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="600_avoid_apis_from_prehistory.html" class="navigation navigation-prev " aria-label="Previous page: Avoid Apis From Prehistory">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="800_do_not_use_magic_numbers.html" class="navigation navigation-next " aria-label="Next page: Do Not Use Magic Numbers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Beware Casts And Generics Warnings","level":"1.4.7","depth":2,"next":{"title":"Do Not Use Magic Numbers","level":"1.4.8","depth":2,"path":"specifics/800_do_not_use_magic_numbers.md","ref":"specifics/800_do_not_use_magic_numbers.md","articles":[]},"previous":{"title":"Avoid Apis From Prehistory","level":"1.4.6","depth":2,"path":"specifics/600_avoid_apis_from_prehistory.md","ref":"specifics/600_avoid_apis_from_prehistory.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","etoc","anchors","expandable-chapters","pygments"],"pluginsConfig":{"etoc":{"mindepth":3,"maxdepth":4,"header":1,"h2lb":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"pygments":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/egis/JavaForSmallTeams/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"specifics/700_beware_casts_and_generics_warnings.md","mtime":"2017-08-31T17:22:53.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-31T17:25:53.432Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

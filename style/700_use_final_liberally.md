@@ -2,7 +2,9 @@
 
 ### Summary
 
-Consider making final any variable or parameter that does not change.
+Consider making final any variable or parameter that does not change. 
+
+> Methods should almost never be made final
 
 ### Details
 

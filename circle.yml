@@ -1,0 +1,25 @@
+machine:
+  node:
+    version: 4.4.2
+
+dependencies:
+  override:
+    - pip install pygments
+    - npm install gh-pages gitbook-plugin-etoc gitbook-plugin-pygments
+    - npm install -g gitbook-cli
+
+test:
+  override:
+    - echo ok
+  post:
+    - gitbook install && gitbook build
+
+deployment:
+  production:
+    branch: master
+    commands:
+
+    - git config --global user.email circleci@circleci
+    - git config --global user.name CircleCI
+    - echo devloper-style.papertrail.co.za > _book/CNAME
+    - ./node_modules/gh-pages/bin/gh-pages -d _book

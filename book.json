@@ -1,1 +1,10 @@
-{  "plugins" : ["ga", "regexplace"],  "pluginsConfig": {        "ga": {            "token": "UA-76476232-1"        },        "regexplace": {            "substitutes": [            {"pattern": "<!-- nopb -->", "flags": "g", "substitute": "<div class=\"nopb\">"},            {"pattern": "<!-- endnopb -->", "flags": "g", "substitute": "</div>"}            ]        }    },  "styles": {    "website": "media/website.css",    "pdf": "media/website.css"  },  "variables": {    "release": "continuous draft"  }}
+{
+    "plugins": ["edit-link", "etoc", "anchors", "expandable-chapters", "pygments"],
+    "pluginsConfig": {
+    "edit-link": {
+                "base": "https://github.com/egis/JavaForSmallTeams/blob/master/",
+                "label": "Edit This Page"
+            }
+
+    }
+}    

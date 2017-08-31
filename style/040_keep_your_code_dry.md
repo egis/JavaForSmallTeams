@@ -6,6 +6,27 @@ Don't Repeat Yourself (DRY) - avoid writing the same logic more than once.
 
 Every time you copy and paste code, flick yourself in the eye. This is a great disincentive to doing it again but over time may cause blindness.
 
+Make extensive use of the Utils classes including, but not limited to:
+
+- Egis Utils
+  - Is
+  - ValidationUtils
+  - CollectionUtils
+  - ExecutorUtils
+  - DateUtils
+  - FileUtils
+  - SQLUtils
+  - HttpRequest
+  - FileObject
+  - Utils
+  - StopWatch
+  - Temp
+- Apache Commons-*
+- Guava
+- Gson
+- Joda
+
+
 ### Details
 
 If the same logic is required more than once then it should not be duplicated; it should instead, be extracted to a well named class or method.

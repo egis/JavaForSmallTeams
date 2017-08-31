@@ -14,7 +14,9 @@ The SOLID acronym provides some guidance on design that you should follow.
 
 #### Single Responsibility Principle
 
-Separate your concerns - a class should do one thing and one thing only. To put it another way, a class should have a single reason to change.
+Separate your concerns - a class should do one **logical** thing and one thing only. To put it another way, a class should have a single reason to change.
+
+**However this Principle does not take precedence over readability, don't create many tiny classes in the name of SOLID.** 
 
 #### Open / Closed Principle
 

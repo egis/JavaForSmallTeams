@@ -918,13 +918,10 @@
 <p>Despite this, programmers tend to have strong opinions on the matter.</p>
 <p>Every codebase should, however, have a single agreed formatting style which is consistently applied and is understood by everyone working on that codebase.</p>
 <p>This prevents commit wars in which different team members re-format things to their personal preference. It also makes code easier to understand as there is a cognitive cost for the reader if formatting changes radically from file to file.</p>
-<p>Although there is value in consistency, there is also a cost.</p>
-<p>Unless there is already broad agreement across teams about how things should be formatted, trying to enforce one official set of rules is likely to create more ill will than benefit.</p>
-<p>A global preferred reference should therefore be set, but teams should be free to deviate from this as they see fit as long as a consistent style is used for the code they maintain.</p>
 <h3 id="formatting-rules"><a name="formatting-rules" class="plugin-anchor" href="#formatting-rules"><i class="fa fa-link" aria-hidden="true"></i></a>Formatting Rules</h3>
 <p>If your do not have your own strong preferences we suggest you follow the <a href="https://google.github.io/styleguide/javaguide.html" target="_blank">Google Java Style</a>.</p>
 <p>These formatting rules are well thought out, clearly documented and not overly prescriptive.</p>
-<p>We will not describe them in any detail here, but code formatted to these rules will look something like the following :-</p>
+<p>We will not describe them in any detail here, but code formatted to these rules will look something like the following :</p>
 <pre><code class="lang-java"><span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.egis.utils.ValidationUtils</span><span class="o">;</span>
@@ -954,7 +951,7 @@
         <span class="n">bars</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">bar</span><span class="o">);</span>
 
         <span class="k">for</span> <span class="o">(</span><span class="n">String</span> <span class="n">s</span> <span class="o">:</span> <span class="n">bars</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">prontln</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="k">try</span> <span class="o">{</span>
@@ -966,7 +963,7 @@
             <span class="o">}</span>
         <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
             <span class="c1">// wrap checked exceptions from libraries</span>
-            <span class="k">throw</span> <span class="n">Utils</span><span class="o">.</span><span class="na">wrapIfNecessary</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+            <span class="n">thow</span> <span class="n">Utils</span><span class="o">.</span><span class="na">wrapIfNecessary</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
@@ -1007,14 +1004,14 @@
 <p>How variables, methods and classes are named plays a big role in how readable it is:</p>
 <ul>
 <li>Keep package name and paths short if only for making command line and GitHub navigation easier</li>
-<li>Keep variable names to below 30, DO NOT USE Hungarian notation</li>
+<li>Keep variable names to below 30 characters, DO NOT USE Hungarian notation</li>
 <li>Do not use Abbreviations or Acronyms except for the few globally accepted: i, j, doc, prop, util, exec</li>
 <li>Keep method parameters count low, and avoid boolean parameters. Use a DTO when necessary</li>
 </ul>
 <h4 id="commit-style"><a name="commit-style" class="plugin-anchor" href="#commit-style"><i class="fa fa-link" aria-hidden="true"></i></a>Commit Style</h4>
 <p>Coding style extends to commit messages:</p>
 <ul>
-<li>Commit Format: <issue type="">: <issue id=""> - <description of="" change=""> e.g. fix: PPT-001 - updated x todo y.
+<li>Commit Format: <issue type="">: <issue id=""> - <description of="" change=""> e.g. <code>fix: PPT-001 - updated x todo y.</code>
   Issue types can be one of:<ul>
 <li>fix</li>
 <li>feat</li>
@@ -1026,12 +1023,13 @@
 <li>Commit all files for a change in a single commit.</li>
 <li>Commit one change at a time.</li>
 <li>Commit refactorings on their own.</li>
+<li>Do not copy and paste contents of the issue</li>
+<li>Keep commit messages short (below 100 characters)</li>
 </ul>
-<h4 id="notable-points-about-this-style"><a name="notable-points-about-this-style" class="plugin-anchor" href="#notable-points-about-this-style"><i class="fa fa-link" aria-hidden="true"></i></a>Notable Points About This Style</h4>
-<h5 id="spaces-not-tabs"><a name="spaces-not-tabs" class="plugin-anchor" href="#spaces-not-tabs"><i class="fa fa-link" aria-hidden="true"></i></a>Spaces not Tabs</h5>
+<h4 id="spaces-not-tabs"><a name="spaces-not-tabs" class="plugin-anchor" href="#spaces-not-tabs"><i class="fa fa-link" aria-hidden="true"></i></a>Spaces not Tabs</h4>
 <p>Tabs may appear differently depending on how an editor is configured. This will result in constant reformatting as different programmers adapt the file to their editor settings. Spaces avoid this problem.</p>
 <p>In some languages (e.g. JavaScript before the rise of code minifiers) tabs have/had an advantage as they reduced the size of the source file compared to using multiple spaces. The increase in size of the source file is of no relevance for Java.</p>
-<h5 id="one-true-brace-style"><a name="one-true-brace-style" class="plugin-anchor" href="#one-true-brace-style"><i class="fa fa-link" aria-hidden="true"></i></a>One True Brace Style</h5>
+<h4 id="one-true-brace-style"><a name="one-true-brace-style" class="plugin-anchor" href="#one-true-brace-style"><i class="fa fa-link" aria-hidden="true"></i></a>One True Brace Style</h4>
 <p>There are various arguments about the supposed advantages of this style, but we suggest its use mainly because it is common in the Java community.</p>
 <p>Although simple <code>if else</code> statements can be more concisely written by omitting the braces we suggest that they are always included. This reduces the chance of a statement being placed outside the conditional when this was not the intent.</p>
 
@@ -1077,7 +1075,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Use A Consistent Code Layout","level":"1.3.3","depth":2,"next":{"title":"Prefer Readable Code To Comments","level":"1.3.4","depth":2,"path":"style/020_prefer_readable_code_to_comments.md","ref":"style/020_prefer_readable_code_to_comments.md","articles":[]},"previous":{"title":"Prefer Reversible Decisions","level":"1.3.2","depth":2,"path":"style/002_prefer_reversible_decisions.md","ref":"style/002_prefer_reversible_decisions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","etoc","anchors","expandable-chapters","pygments"],"pluginsConfig":{"etoc":{"mindepth":3,"maxdepth":4,"header":1,"h2lb":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"pygments":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/egis/JavaForSmallTeams/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"style/010_use_a_consistent_code_layout.md","mtime":"2017-08-31T18:27:40.758Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-31T18:29:32.744Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Use A Consistent Code Layout","level":"1.3.3","depth":2,"next":{"title":"Prefer Readable Code To Comments","level":"1.3.4","depth":2,"path":"style/020_prefer_readable_code_to_comments.md","ref":"style/020_prefer_readable_code_to_comments.md","articles":[]},"previous":{"title":"Prefer Reversible Decisions","level":"1.3.2","depth":2,"path":"style/002_prefer_reversible_decisions.md","ref":"style/002_prefer_reversible_decisions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","etoc","anchors","expandable-chapters","pygments"],"pluginsConfig":{"etoc":{"mindepth":3,"maxdepth":4,"header":1,"h2lb":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"pygments":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/egis/JavaForSmallTeams/blob/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"style/010_use_a_consistent_code_layout.md","mtime":"2017-09-07T14:08:43.189Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-07T14:10:24.125Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
